@@ -181,7 +181,7 @@ export function AppShell({
             </div>
           </div>
         </header>
-        <main className="px-4 py-6 sm:px-8">{children}</main>
+        <main className="px-4 py-6 pb-24 sm:px-8 lg:pb-6">{children}</main>
       </div>
       <nav className="fixed inset-x-0 bottom-0 z-30 grid grid-cols-5 border-t border-border bg-card/95 pb-safe lg:hidden">
         {items.slice(0, 5).map((item) => (
