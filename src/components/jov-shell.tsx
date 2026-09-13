@@ -95,7 +95,7 @@ export function AppShell({
         </div>
         <div className="mt-10 space-y-1">
           {items.map((item) => {
-            const isActive = pathname === item.to || pathname.startsWith(`${item.to}/`);
+            const isActive = pathname === item.to;
             return (
               <Link
                 key={item.to}
