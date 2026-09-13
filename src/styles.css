@@ -60,11 +60,15 @@
   }
   html {
     font-family: var(--font-sans);
+    min-height: 100%;
+    overflow-y: auto;
   }
   body {
+    min-height: 100vh;
     margin: 0;
     background: var(--color-background);
     color: var(--color-foreground);
+    overflow-x: hidden;
   }
   button,
   a,

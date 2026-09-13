@@ -62,7 +62,7 @@ export function AppShell({
   return (
     <div className={`min-h-screen bg-background text-foreground ${isAdmin ? "admin-density" : ""}`}>
       <aside
-        className={`fixed inset-y-0 left-0 z-40 w-64 border-r border-border bg-card p-5 transition-transform lg:translate-x-0 ${open ? "translate-x-0" : "-translate-x-full"}`}
+        className={`fixed inset-y-0 left-0 z-40 w-64 border-r border-border bg-card p-5 transition-transform lg:translate-x-0 overflow-y-auto ${open ? "translate-x-0" : "-translate-x-full"}`}
       >
         <div className="flex items-center justify-between">
           <Link
