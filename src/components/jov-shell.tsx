@@ -94,19 +94,22 @@ export function AppShell({
           </Button>
         </div>
         <div className="mt-10 space-y-1">
-          {items.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to as never}
-              onClick={() => setOpen(false)}
-              className={`nav-link ${pathname === item.to ? "nav-link-active" : ""}`}
-            >
-              <span className="grid size-6 place-items-center text-sm font-semibold">
-                {item.icon}
-              </span>
-              {item.label}
-            </Link>
-          ))}
+          {items.map((item) => {
+            const isActive = pathname === item.to || pathname.startsWith(`${item.to}/`);
+            return (
+              <Link
+                key={item.to}
+                to={item.to as never}
+                onClick={() => setOpen(false)}
+                className={`nav-link ${isActive ? "nav-link-active" : ""}`}
+              >
+                <span className="grid size-6 place-items-center text-sm font-semibold">
+                  {item.icon}
+                </span>
+                {item.label}
+              </Link>
+            );
+          })}
         </div>
         <div className="absolute inset-x-5 bottom-5 border-t border-border pt-4">
           <Link to={`/${kind}/support` as never} className="nav-link">
