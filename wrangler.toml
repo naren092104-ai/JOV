@@ -1,0 +1,8 @@
+name = "jov-fleet-ui-suite"
+main = "./.output/server/index.mjs"
+compatibility_flags = ["nodejs_compat"]
+compatibility_date = "2026-09-13"
+assets = { directory = "./.output/public", binding = "ASSETS" }
+
+[build]
+command = "npm run build"
